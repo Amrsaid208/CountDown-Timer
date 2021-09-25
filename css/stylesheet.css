@@ -1,0 +1,134 @@
+:root{
+--Grayishblue: hsl(237, 18%, 59%);
+--Softred: hsl(345, 95%, 68%);
+--White: hsl(0, 0%, 100%);
+--Darkdesaturatedblue: hsl(236, 21%, 26%);
+--Verydarkblue: hsl(235, 16%, 14%);
+--Verydarkmostlyblackblue: hsl(234, 17%, 12%);
+--fontPrim: 'Red Hat Text', sans-serif;
+}
+
+.hills{
+    background-image: url(../images/pattern-hills.svg);
+    position: absolute;
+    bottom: 0;
+    height: 30vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+*
+,::before
+,::after
+{   
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+h1{
+    color: var(--Softred);
+    font-family: var(--fontPrim);
+}
+
+.cnt{
+    background-color: var(--Verydarkblue);
+
+    background-image: url(../images/bg-stars.svg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    min-height: 100vh;
+}
+h2{
+    color: var(--White);
+    text-align: center;
+    padding-top:10rem;
+    font-family: var(--fontPrim);
+    letter-spacing: 5px;
+    margin-bottom: 5rem;
+}
+@media (max-width :375px){
+    h2{
+        color: var(--White);
+        text-align: center;
+        padding-top:10rem;
+        font-family: var(--fontPrim);
+        letter-spacing: 5px;
+        margin-bottom: 5rem;
+        font-size: 2rem;
+    }
+
+}
+.cont{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    gap: 1%;
+
+}
+.cont div h4{
+    background-color: var(--Darkdesaturatedblue);
+    color: var(--Softred);
+    padding: .75em;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 1px 7px 5px 1px black;
+    width: 100%;
+} 
+@media (max-width:375px){
+    .cont div h4{
+        background-color: var(--Darkdesaturatedblue);
+        color: var(--Softred);
+        padding: .75em;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        border-radius: 10px;
+        position: relative;
+        box-shadow: 1px 7px 5px 1px black;
+        width: 100%;
+    }
+}
+
+.cont div h4::before{
+    content: " ";
+    height: 1px;
+    
+    background-color:rgba(0,0,0,.2) ;
+    top: 50%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 0.5px 0px 0px var(--Verydarkblue);
+    
+
+}
+.cont div{
+    text-align: center;
+    /* margin-left: 10%; */
+}
+span{
+    text-align: center;
+    color: var(--Grayishblue);
+}
+.btn{
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--Softred);
+    border:0px;
+    padding: 10px;
+    text-align: center;
+
+}
+.bts
+{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20%;
+}
